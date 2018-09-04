@@ -62,6 +62,28 @@ The second method is to play notifications (`alarm`). There are 4 build-in sound
 }
 ```
 
+You can also have the built in sounds play a continuous loop for use in alarm systems by adding (':continuous') after the sound choice ie. ('chime:continuous','alarm:continuous','doorbell:continuous','siren:continuous'). 
+
+```json
+{
+  "message": "alarm:continuous",
+  "data": {
+    "method": "alarm"
+  }
+}
+```
+
+To terminate the continuous alarm, use "stop" in place of a sound type. 
+
+```json
+{
+  "message": "stop",
+  "data": {
+    "method": "alarm"
+  }
+}
+```
+
 You can also request to play a configured additional soundfiles (`FILE1`, `FILE2`, `FILE3`, `FILE4` or `FILE5`). You can configure this file in the app settings.
 
 ```json
